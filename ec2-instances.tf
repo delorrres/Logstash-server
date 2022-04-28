@@ -10,6 +10,6 @@ resource "aws_instance" "Logstash" {
     availability_zone = "us-east-2a"
 
   tags = {
-    Name = "Logstash"
+    Name = "Logstash-server"
  }
 }

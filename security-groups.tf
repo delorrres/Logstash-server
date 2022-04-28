@@ -9,16 +9,16 @@ resource "aws_security_group" "my_private_app_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # 0.0.0.0/0
+    cidr_blocks = ["192.168.0.0/16"] # 0.0.0.0/0
   }
 
 #Logstash connectiom
   ingress {
-    description = "Allow Logstash access to server"
+    description = "Allow demo servers to send logs to Logstash"
     from_port   = 5044
     to_port     = 5044
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # 0.0.0.0/0
+    cidr_blocks = ["192.168.0.0/16"] # 0.0.0.0/0
   }
 
   # OUTBOUT CONNECTIONS
