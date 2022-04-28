@@ -8,14 +8,14 @@ data "aws_ami" "ubuntu_image" {
   }
 }
 
-data "aws_vpc" "main_vpc" {
+data "aws_vpc" "main" {
   filter {
     name   = "tag:Name"
     values = [var.vpc_name]
   }
 }
 
-data "aws_subnet" "private" {
+data "aws_subnet" "private-elk" {
   filter {
     name   = "tag:Name"
     values = [var.private_subnet_name]
