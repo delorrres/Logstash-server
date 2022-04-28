@@ -1,7 +1,7 @@
 resource "aws_security_group" "my_private_app_sg" {
   name        = "Logstash_sg"
   description = "Allow access to this server"
-  vpc_id      = data.aws_vpc.main_vpc.id
+  vpc_id      = data.aws_vpc.main.id
 
   # INBOUND CONNECTIONS
   ingress {
